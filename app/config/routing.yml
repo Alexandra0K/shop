@@ -1,0 +1,9 @@
+online_fashion_rest_api:
+    resource: "@OnlineFashionRestApiBundle/Controller/"
+    type:     annotation
+    prefix:   /api
+
+app:
+    resource: '@OnlineFashionBundle/Controller/'
+    type: annotation
+
