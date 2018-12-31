@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends 'base.html.twig' %}
 
 {% block main %}
@@ -13,3 +14,20 @@
 
 {% endblock %}
 
+=======
+{% extends 'base.html.twig' %}
+
+{% block main %}
+
+<form method="post">
+    About: <input type="text" name="message[about]" ><br/>
+    Content: <textarea rows="10" name="message[content]" ></textarea><br/>
+    {{  form_row(form._token) }}
+
+    <input type="submit" value="Send message"><br/>
+
+</form>
+
+{% endblock %}
+
+>>>>>>> fda21f45e5f6597f4f892dacfe0669d34d72f089

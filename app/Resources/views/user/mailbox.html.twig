@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends 'base.html.twig' %}
 
 {% block main %}
@@ -17,3 +18,24 @@
     </div>
 {% endblock %}
 
+=======
+{% extends 'base.html.twig' %}
+
+{% block main %}
+
+{% for message in pagination %}
+{% if message.read %}
+   <p> <a href="{{ path('user_current_message', {'id': message.id}) }}"> {{ message.sender.fullName }}</a>
+    <span style="float: right; color: red">Unread</span></p>
+
+    {% else %}
+        <p> <a href="{{ path('user_current_message', {'id': message.id}) }}"> {{ message.sender.fullName }}</a>
+            <span style="float: right; color: green">Read</span></p>
+    {% endif %}
+    {% endfor %}
+    <div class="navigation">
+        {{ knp_pagination_render(pagination) }}
+    </div>
+{% endblock %}
+
+>>>>>>> fda21f45e5f6597f4f892dacfe0669d34d72f089
