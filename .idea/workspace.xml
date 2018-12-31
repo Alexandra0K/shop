@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="39d29037-7b3d-4edd-b120-294a04e3ad40" name="Default Changelist" comment="" />
+    <list default="true" id="39d29037-7b3d-4edd-b120-294a04e3ad40" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/shop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,11 +135,12 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="2" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.55" value="1" />
           <entry key="project.open.time.61" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -211,7 +214,11 @@
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/OnlineFashionBundle/Controller/ArticleController.php">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="24" column="50" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -264,7 +271,7 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/shop" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -603,7 +610,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/shop-master/shop-master" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.composer" />
@@ -647,12 +654,13 @@
       <workItem from="1546159688574" duration="2707000" />
       <workItem from="1546262492858" duration="949000" />
       <workItem from="1546265387277" duration="592000" />
-      <workItem from="1546272456693" duration="979000" />
+      <workItem from="1546272456693" duration="729000" />
+      <workItem from="1546274200123" duration="374000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="151657000" />
+    <option name="totallyTimeSpent" value="151781000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -666,7 +674,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="723" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49839228" visible="true" weight="0.2579425" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49839228" visible="true" weight="0.26172465" />
       <window_info id="Structure" order="1" sideWeight="0.5016077" side_tool="true" weight="0.16868381" />
       <window_info id="Favorites" order="2" sideWeight="0.5008489" side_tool="true" weight="0.16868381" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -679,8 +687,8 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.3293718" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49924356" visible="true" weight="0.237691" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50075644" side_tool="true" weight="0.237691" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49848714" visible="true" weight="0.237691" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5015129" side_tool="true" weight="0.237691" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.3293718" />
       <window_info anchor="bottom" id="PHP-CGI Server" order="13" weight="0.3293718" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -935,7 +943,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OnlineFashionBundle/Controller/ArticleController.php">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="24" column="50" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {% extends 'base.html.twig' %}
 
 {% block main %}
@@ -43,49 +42,3 @@
     </script>
 {% endblock %}
 
-=======
-{% extends 'base.html.twig' %}
-
-{% block main %}
-
-
-    {% for msg in app.session.flashBag.get('message') %}
-        <div id="msg" class="alert alert-success alert-dismissible" data-auto-dismiss role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            {{ msg }}
-        </div>
-    {% endfor %}
-
-
-<p>From: {{ message.sender.fullName }}</p>
-<p>About: {{ message.about }}</p>
-<p>Content: {{ message.content }}</p>
-<p>Date sent: {{ message.dateAdded|date("F jS \\a\\t g:ia") }}</p>
-
-
-
-    <h1>Add message</h1>
-<button  class="btn btn-success btn-sm" id="btnMessage">Send message</button>
-    <div id="form"></div>
-
-    <script>
-        let form = $(`
-     <form method="post">
-        About: <input type="text" name="message[about]" ><br/>
-        Content: <textarea rows="10" name="message[content]" ></textarea><br/>
-        {{  form_row(form._token) }}
-        <input type="submit" value="Send message"><br/>
-    </form>
-        `);
-
-        $('#btnMessage').click(function (e) {
-
-            e.preventDefault();
-            $('#form').append(form);
-            $('#form').toggle();
-
-        })
-    </script>
-{% endblock %}
-
->>>>>>> fda21f45e5f6597f4f892dacfe0669d34d72f089
