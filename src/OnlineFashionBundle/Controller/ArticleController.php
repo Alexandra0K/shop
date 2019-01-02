@@ -2,13 +2,13 @@
 
 namespace OnlineFashionBundle\Controller;
 
+use OnlineFashionBundle\Entity\Category;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use OnlineFashionBundle\Entity\Article;
 use OnlineFashionBundle\Entity\Comment;
 use OnlineFashionBundle\Entity\User;
 use OnlineFashionBundle\Form\ArticleType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Request;
@@ -41,6 +41,11 @@ class ArticleController extends Controller
 
             }
 
+            $categories = $this
+                ->getDoctrine()
+                ->getRepository(Category::class)
+                ->findAll();
+
             $article->setImage($fileName);
 
 
@@ -56,7 +61,7 @@ class ArticleController extends Controller
         }
 
         return $this->render('article/create.html.twig',
-            ['form' => $form->createView()]);
+            ['form' => $form->createView(), 'categories'=>$form->createView()]);
     }
 
     /**

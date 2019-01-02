@@ -78,13 +78,6 @@ class Article
     private $categories;
 
     /**
-     * @var ArrayCollection|CategoryParent[]
-     * @ORM\OneToMany(targetEntity="OnlineFashionBundle\Entity\Category", mappedBy="article", cascade={"remove"})
-     */
-    private $parentCats;
-
-
-    /**
      * @var string
      * @ORM\Column(name="image", type="text", nullable=false)
      * @Expose()
@@ -127,7 +120,6 @@ class Article
         $this->dateAdded = new DateTime('now');
         $this->comments= new ArrayCollection();
         $this->categories= new ArrayCollection();
-        $this->parentCats= new ArrayCollection();
     }
 
     /**
@@ -307,20 +299,6 @@ class Article
         $this->categories[] = $category;
     }
 
-    /**
-     * @return ArrayCollection|CategoryParent[]
-     */
-    public function getParentCats()
-    {
-        return $this->parentCats;
-    }
 
-    /**
-     * @param CategoryParent $parentCat
-     */
-    public function setParentCats($parentCat)
-    {
-        $this->parentCats[] = $parentCat;
-    }
 }
 

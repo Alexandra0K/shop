@@ -3,6 +3,9 @@
 namespace OnlineFashionBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping\JoinColumn;
+use Doctrine\ORM\Mapping\ManyToOne;
+use Doctrine\ORM\Mapping\OneToMany;
 
 /**
  * Category
@@ -22,11 +25,17 @@ class Category
     private $id;
 
     /**
-     * @var int
-     * @ORM\ManyToOne(targetEntity="OnlineFashionBundle\Entity\CategoryParent", inversedBy="id")
-     *
+     * One Category has Many Categories.
+     * @OneToMany(targetEntity="Category", mappedBy="parent")
      */
-    private $parentCats;
+    private $children;
+
+    /**
+     * Many Categories have One Category.
+     * @ManyToOne(targetEntity="Category", inversedBy="children")
+     * @JoinColumn(name="parent_id", referencedColumnName="id")
+     */
+    private $parent;
 
     /**
      * @var string
@@ -37,59 +46,14 @@ class Category
 
     /**
      * @var Article
-     * @ORM\ManyToOne(targetEntity="OnlineFashionBundle\Entity\Article", inversedBy="comments")
+     * @ORM\ManyToOne(targetEntity="OnlineFashionBundle\Entity\Article", inversedBy="categories")
      */
     private $article;
 
-    /**
-     * Get id.
-     *
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->id;
+    public function __construct() {
+        $this->children = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
-    /**
-     * Set catName.
-     *
-     * @param string $catName
-     *
-     * @return Category
-     */
-    public function setCatName($catName)
-    {
-        $this->catName = $catName;
-
-        return $this;
-    }
-
-    /**
-     * Get catName.
-     *
-     * @return string
-     */
-    public function getCatName()
-    {
-        return $this->catName;
-    }
-
-    /**
-     * @return int
-     */
-    public function getParentCats()
-    {
-        return $this->parentCats;
-    }
-
-    /**
-     * @param int $parentCats
-     */
-    public function setParentCats($parentCats)
-    {
-        $this->parentCats = $parentCats;
-    }
 
     /**
      * @return Article
@@ -107,4 +71,68 @@ class Category
         $this->article = $article;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getChildren()
+    {
+        return $this->children;
+    }
+
+    /**
+     * @param mixed $children
+     */
+    public function setChildren($children)
+    {
+        $this->children = $children;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getParent()
+    {
+        return $this->parent;
+    }
+
+    /**
+     * @param mixed $parent
+     */
+    public function setParent($parent)
+    {
+        $this->parent = $parent;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCatName()
+    {
+        return $this->catName;
+    }
+
+    /**
+     * @param string $catName
+     */
+    public function setCatName($catName)
+    {
+        $this->catName = $catName;
+    }
+
+
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
 }

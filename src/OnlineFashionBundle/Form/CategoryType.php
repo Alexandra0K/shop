@@ -24,12 +24,17 @@ class CategoryType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('catName', TextType::class)
-            ->add('parentCats', ChoiceType::class, array(
+        $builder
+            ->add('parent', ChoiceType::class, array(
+                'choice_loader' => new CallbackChoiceLoader(function() {
+                    return $this->categories;
+                }),))
+            ->add('children', ChoiceType::class, array(
                 'choice_loader' => new CallbackChoiceLoader(function() {
                     return $this->categories;
                 }),
-            ));
+            ))
+        ;
     }/**
      * {@inheritdoc}
      */
