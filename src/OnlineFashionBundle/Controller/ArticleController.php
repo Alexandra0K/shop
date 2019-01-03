@@ -28,6 +28,11 @@ class ArticleController extends Controller
         $form = $this->createForm(ArticleType::class, $article);
         $form->handleRequest($request);
 
+        $categories = $this
+            ->getDoctrine()
+            ->getRepository(Category::class)
+            ->findAll();
+
         if ($form->isSubmitted() && $form->isValid()) {
 
             /** @var UploadedFile $file */
@@ -41,10 +46,7 @@ class ArticleController extends Controller
 
             }
 
-            $categories = $this
-                ->getDoctrine()
-                ->getRepository(Category::class)
-                ->findAll();
+
 
             $article->setImage($fileName);
 
@@ -61,7 +63,7 @@ class ArticleController extends Controller
         }
 
         return $this->render('article/create.html.twig',
-            ['form' => $form->createView(), 'categories'=>$form->createView()]);
+            ['form' => $form->createView(), 'categories'=> $categories]);
     }
 
     /**
