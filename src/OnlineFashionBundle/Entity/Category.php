@@ -2,10 +2,12 @@
 
 namespace OnlineFashionBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\ORM\Mapping\JoinColumn;
 use Doctrine\ORM\Mapping\ManyToOne;
 use Doctrine\ORM\Mapping\OneToMany;
+
 
 /**
  * Category
@@ -18,58 +20,77 @@ class Category
     /**
      * @var int
      *
-     * @ORM\Column(name="id", type="integer")
+     * @ORM\Column(name="id", type="integer", nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
 
     /**
-     * One Category has Many Categories.
+     *
      * @OneToMany(targetEntity="Category", mappedBy="parent")
      */
     private $children;
 
     /**
-     * Many Categories have One Category.
+     * @var Category
      * @ManyToOne(targetEntity="Category", inversedBy="children")
-     * @JoinColumn(name="parent_id", referencedColumnName="id")
+     * @JoinColumn(name="parent_id", referencedColumnName="id", nullable=true)
      */
     private $parent;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="catName", type="string", length=255, unique=true)
+     * @ORM\Column(name="catName", type="string", length=255)
      */
     private $catName;
 
     /**
-     * @var Article
-     * @ORM\ManyToOne(targetEntity="OnlineFashionBundle\Entity\Article", inversedBy="categories")
+     * @var Article[]
+     * @ORM\ManyToMany(targetEntity="OnlineFashionBundle\Entity\Article", mappedBy="categories")
      */
-    private $article;
+    private $articles;
+
+    /**
+     * @var Promotion[]
+     * @ORM\ManyToMany(targetEntity="OnlineFashionBundle\Entity\Promotion", mappedBy="categories")
+     * @ORM\JoinTable(name="category_promotion")
+     */
+    private $promotions;
+
+    /**
+     * @var Promotion
+     * @ManyToOne(targetEntity="OnlineFashionBundle\Entity\Promotion", inversedBy="category")
+     */
+    private $promotion;
 
     public function __construct() {
-        $this->children = new \Doctrine\Common\Collections\ArrayCollection();
+
+        $this->children = new ArrayCollection();
+        $this->articles = new ArrayCollection();
+        $this->promotions = new ArrayCollection();
     }
 
 
     /**
-     * @return Article
+     * @return Article[]
      */
-    public function getArticle()
+    public function getArticles()
     {
-        return $this->article;
+        return $this->articles;
     }
 
     /**
-     * @param Article $article
+     * @param Article[] $articles
      */
-    public function setArticle($article)
+    public function setArticles($articles)
     {
-        $this->article = $article;
+        $this->articles->clear();
+        $this->articles = new ArrayCollection($articles);
     }
+
+
 
     /**
      * @return mixed
@@ -88,7 +109,7 @@ class Category
     }
 
     /**
-     * @return mixed
+     * @return Category
      */
     public function getParent()
     {
@@ -96,7 +117,7 @@ class Category
     }
 
     /**
-     * @param mixed $parent
+     * @param Category $parent
      */
     public function setParent($parent)
     {
@@ -135,4 +156,61 @@ class Category
     {
         $this->id = $id;
     }
+
+    /**
+     * @param Article $article
+     */
+    public function addArticle($article)
+    {
+        if ($this->articles->contains($article)) {
+            return;
+        }
+        $this->articles->add($article);
+        $article->addCategory($this);
+    }
+    /**
+     * @param Article $article
+     */
+    public function removeArticle($article)
+    {
+        if (!$this->articles->contains($article)) {
+            return;
+        }
+        $this->articles->removeElement($article);
+        $article->removeCategory($this);
+    }
+
+    /**
+     * @return Promotion[]
+     */
+    public function getPromotions()
+    {
+        return $this->promotions;
+    }
+
+    /**
+     * @param Promotion $promotion
+     */
+    public function addPromotion($promotion)
+    {
+        $this->promotions[] = $promotion;
+    }
+
+    /**
+     * @return Promotion
+     */
+    public function getPromotion()
+    {
+        return $this->promotion;
+    }
+
+    /**
+     * @param Promotion $promotion
+     */
+    public function setPromotion($promotion)
+    {
+        $this->promotion = $promotion;
+    }
+
+
 }

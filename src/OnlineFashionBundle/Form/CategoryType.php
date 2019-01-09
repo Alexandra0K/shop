@@ -13,10 +13,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class CategoryType extends AbstractType
 {
-    /**
-     * @var ArrayCollection|Category[]
-     */
-    private $categories;
+
 
 
     /**
@@ -25,16 +22,31 @@ class CategoryType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('parent', ChoiceType::class, array(
-                'choice_loader' => new CallbackChoiceLoader(function() {
-                    return $this->categories;
-                }),))
-            ->add('children', ChoiceType::class, array(
-                'choice_loader' => new CallbackChoiceLoader(function() {
-                    return $this->categories;
-                }),
-            ))
-        ;
+        ->add('category', ChoiceType::class, array(
+            'choices' => array(
+                'placeholder' => 'Please select',
+                'Women' => array(
+                    'placeholder' => 'Please select',
+                    'Shirts' => '3',
+                    'Trousers' => '4',
+                    'Shoes' => '5',
+                    'Accessories' => '6',
+                    'Coats' => '7',
+                    'Dresses' => '8',
+                    'Skirts' => '9',
+                ),
+                'Men' => array(
+                    'placeholder' => 'Please select',
+                    'Shirts' => '10',
+                    'Trousers' => '11',
+                    'Shoes' => '12',
+                    'Accessories' => '13',
+                    'Coats' => '14',
+                ),
+            ),
+        ));
+
+
     }/**
      * {@inheritdoc}
      */
@@ -45,25 +57,6 @@ class CategoryType extends AbstractType
         ));
     }
 
-    public function __construct()
-    {
-        $this->categories= new ArrayCollection();
-    }
-    /**
-     * @return ArrayCollection|Category[]
-     */
-    public function getCategories()
-    {
-        return $this->categories;
-    }
-
-    /**
-     * @param Category $category
-     */
-    public function setCategories($category)
-    {
-        $this->categories[] = $category;
-    }
 
 
 }

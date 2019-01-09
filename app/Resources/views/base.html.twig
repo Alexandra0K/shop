@@ -56,18 +56,28 @@
                                 {% endif %}
                             </li>
                             <li>
+                                {% if is_granted('ROLE_ADMIN') %}
+                                    <a href="{{ path('promo_create') }}">
+                                        Promo Edit
+                                    </a>
+                                {% endif %}
+                            </li>
+                            <li>
+                                {% if is_granted('ROLE_ADMIN') %}
+                                        <a href="{{ path('article_create') }}">
+                                            Create Article
+                                        </a>
+                                {% endif %}
+                            </li>
+                            <li>
                             <a href="{{ path('user_mailbox') }}"><span class="glyphicon glyphicon-envelope"></span> </a>
                             </li>
                             <li>
                                 <a href="{{ path('myArticles') }}">
-                                    My Articles
+                                    Shopping basket
                                 </a>
                             </li>
-                            <li>
-                                <a href="{{ path('article_create') }}">
-                                    Create Article
-                                </a>
-                            </li>
+
                             <li>
                                 <a href="{{ path('user_profile') }}">
                                     My Profile

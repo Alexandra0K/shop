@@ -3,7 +3,8 @@
 {% block main %}
     <div class="container body-description span=8 offset=2">
         <div class="well">
-            <form class="form-horizontal" enctype="multipart/form-data" action="{{ path('article_create') }}" method="POST">
+            <form class="form-horizontal" enctype="multipart/form-data" action="{{ path('article_create') }}"
+                  method="POST">
                 <fieldset>
                     <legend>New Product</legend>
 
@@ -15,140 +16,72 @@
                         </div>
                     </div>
 
-                    {#<div class="form-group">#}
-                        {#<label class="col-sm-4 control-label" for="category_name">Category</label>#}
-                        {#<div class="col-sm-4 ">#}
-                            {#<input type="text" class="form-control" id="category_name" placeholder="Category"#}
-                                   {#name="category[name]">#}
-                        {#</div>#}
-
-                    {#</div>#}
-
-                    <div>
-
-
-                            <meta name="viewport" content="width=device-width, initial-scale=1">
-                            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-                            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-                            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-                            <style>
-                                .dropdown-submenu {
-                                    position: relative;
-                                }
-
-                                .dropdown-submenu .dropdown-menu {
-                                    top: 0;
-                                    left: 100%;
-                                    margin-top: -1px;
-                                }
-                            </style>
-
-
-
-                        <div class="container">
-
-                            <p>Category</p>
-                            <div class="dropdown">
-                                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Select a category
-                                    <span class="caret"></span></button>
-                                <ul class="dropdown-menu">
-
-
-
-                                    <li class="dropdown-submenu">
-
-                                        {% for category in categories %}
-                                        {% if category.parent == null %}
-                                    <li>
-                                        <a href="{{ category.id }}">{{ category.catName }}</a>
-                                        {% if category.children|length > 0 %}
-                                            <ul>
-                                                {% for cat in category.children %}
-                                                    <li>
-                                                        <a tabindex="-1" href="{{ cat.id }}">{{ cat.catName }}</a>
-                                                    </li>
-                                                {% endfor %}
-                                            </ul>
-                                        {% endif %}
-                                    </li>
-                                    {% endif %}
-                                    {% endfor %}
-
-                                        {#<a class="test" tabindex="-1" href="#">New dropdown <span class="caret"></span></a>#}
-                                        {#<ul class="dropdown-menu">#}
-                                            {#<li><a tabindex="-1" href="#">2nd level dropdown</a></li>#}
-                                            {#<li><a tabindex="-1" href="#">2nd level dropdown</a></li>#}
-                                            {#<li class="dropdown-submenu">#}
-                                                {#<a class="test" href="#">Another dropdown <span class="caret"></span></a>#}
-                                                {#<ul class="dropdown-menu">#}
-                                                    {#<li><a href="#">3rd level dropdown</a></li>#}
-                                                    {#<li><a href="#">3rd level dropdown</a></li>#}
-                                                {#</ul>#}
-                                            {#</li>#}
-                                        {#</ul>#}
-
-
-
-
-                                    </li>
-                                </ul>
-                            </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="article_basePrice">Base price</label>
+                        <div class="col-sm-4 ">
+                            <input type="text" class="form-control" id="article_basePrice" placeholder="Base price"
+                                   name="article[basePrice]">
                         </div>
-
-                        <script>
-                            $(document).ready(function(){
-                                $('.dropdown-submenu a.test').on("click", function(e){
-                                    $(this).next('ul').toggle();
-                                    e.stopPropagation();
-                                    e.preventDefault();
-                                });
-                            });
-                        </script>
-
-
-
-
-
-
-
-
-
-
-                        {#<label class="col-sm-4 control-label" for="parentCat_name">Category</label>#}
-                        {#<ul>#}
-                            {#{% for category in categories %}#}
-                                {#{% if category.parent == null %}#}
-                                    {#<li>#}
-                                        {#<a href="{{ category.id }}">{{ category.name }}</a>#}
-                                        {#{% if category.children|length > 0 %}#}
-                                            {#<ul>#}
-                                                {#{% for category in category.children %}#}
-                                                    {#<li>#}
-                                                        {#<a href="{{ category.id }}">{{ category.name }}</a>#}
-                                                    {#</li>#}
-                                                {#{% endfor %}#}
-                                            {#</ul>#}
-                                        {#{% endif %}#}
-                                    {#</li>#}
-                                {#{% endif %}#}
-                            {#{% endfor %}#}
-                        {#</ul>#}
                     </div>
 
-<hr/>
 
                     <div class="form-group">
                         <label class="col-sm-4 control-label" for="article_description">Product description</label>
                         <div class="col-sm-6">
-                        <textarea class="form-control" rows="6" id="article_description" placeholder="Product description"
+                        <textarea class="form-control" rows="6" id="article_description"
+                                  placeholder="Product description"
                                   name="article[description]"></textarea>
                         </div>
                     </div>
 
+                       <div class="form-group" >
+                                <label class="col-sm-4 control-label" for="article_category" >Category</label>
+                                <div class="col-sm-4 " >
+
+                                    <select name="column_select" id="column_select">
+                                        <option value="null">Please select</option>
+                                        <option value="w">Women</option>
+                                        <option value="m">Men</option>
+                                    </select>
+
+                                    <select name="layout_select" id="layout_select">
+                                        <!--Below shows when 'Women' is selected is hidden otherwise-->
+                                        <option value="null2">Please select</option>
+                                        <option value="w_shirt">Shirts</option>
+                                        <option value="w_trousers">Trousers</option>
+                                        <option value="w_shoe">Shoes</option>
+                                        <option value="w_accessories">Accessories</option>
+                                        <option value="w_coat">Coats</option>
+                                        <option value="w_dress">Dresses</option>
+                                        <option value="w_skirt">Skirts</option>
+
+                                        <!--Below shows when 'Men' is selected is hidden otherwise-->
+                                        <option value="m_shirt">Shirts</option>
+                                        <option value="m_trousers">Trousers</option>
+                                        <option value="m_shoe">Shoes</option>
+                                        <option value="m_accessories">Accessories</option>
+                                        <option value="m_coat">Coats</option>
+
+
+                                    </select>
+
+<script>
+    $(document).ready(function() {
+        $("#layout_select").children('option:gt(0)').hide();
+        $("#column_select").change(function() {
+            $("#layout_select").children('option').hide();
+            $("#layout_select").children("option[value^=" + $(this).val() + "]").show()
+        })
+    })
+</script>
+                                </div>
+                       </div>
+
                     <div class="form-group">
                         <label class="col-sm-4 control-label" for="article_image">Image</label>
                         <div class="col-sm-4 ">
-                            <input type="file" accept=".image/gif, .jpeg, .png, .jpg" class="form-control" id="article_image" placeholder="Image"
+                            <input type="file" accept=".image/gif, .jpeg, .png, .jpg" class="form-control"
+                                   id="article_image" placeholder="Image"
                                    name="article[image]">
                         </div>
                     </div>

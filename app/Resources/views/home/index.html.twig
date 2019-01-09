@@ -7,11 +7,11 @@
                 <div class="col-md-6">
                     <article>
                         <header>
-                            <h2>{{ article.title }}</h2>
+                            <h2>{{ article.name }}</h2>
                         </header>
 
                         <p>
-                            {{ article.summary }}
+                            {{ article.description }}
                         </p>
                         
                      <a href="{{ path('article_view', {'id': article.id}) }}" ><img src="{{ asset('uploads/images/' ~ article.image)}}"  width="400" height="200"></a>
@@ -21,11 +21,11 @@
                         </small>
 
                         Views: {{ article.viewCount }}
-                       <a href="{{ path('article_likes', {'id': article.id}) }}"><i class="glyphicon glyphicon-thumbs-up"></i></a>
+
                         <footer>
                             <div class="pull-right">
                                 <a class="btn btn-default btn-xs"
-                                   href="{{ path('article_view', {'id': article.id}) }}">Read more &raquo;</a>
+                                   href="{{ path('article_view', {'id': article.id}) }}">View details &raquo;</a>
                             </div>
                         </footer>
                     </article>

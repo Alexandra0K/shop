@@ -5,7 +5,6 @@ namespace OnlineFashionBundle\Entity;
 use DateTime;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
-use JMS\Serializer\Annotation as Serializer;
 use JMS\Serializer\Annotation\ExclusionPolicy;
 use JMS\Serializer\Annotation\Expose;
 
@@ -41,6 +40,13 @@ class Article
  private $basePrice;
 
     /**
+     * @var double
+     * @ORM\Column(name="promoPrice", type="float")
+     * @ORM\OneToOne(targetEntity="OnlineFashionBundle\Entity\Promotion", mappedBy="promoPrice")
+     */
+    private $promoPrice;
+
+    /**
      * @var \DateTime
      *
      * @ORM\Column(name="dateAdded", type="datetime")
@@ -52,7 +58,7 @@ class Article
      * @var string
      * @Expose()
      */
-    private $description;
+    private $summary;
 
     /**
      * @var int
@@ -71,11 +77,33 @@ class Article
     private $author;
 
     /**
-     * @var ArrayCollection|Category[]
+     * @var Category[]
      *
-     * @ORM\OneToMany(targetEntity="OnlineFashionBundle\Entity\Category", mappedBy="article", cascade={"remove"})
+     * @ORM\ManyToMany(targetEntity="OnlineFashionBundle\Entity\Category", inversedBy="articles", cascade={"remove"})
+     * @ORM\JoinTable(name="article_category")
      */
     private $categories;
+
+
+    /**
+     * @var Promotion[]
+     *
+     * @ORM\ManyToMany(targetEntity="OnlineFashionBundle\Entity\Promotion", inversedBy="articles", cascade={"remove"})
+     * @ORM\JoinTable(name="article_promotion")
+     */
+    private $promotions;
+
+    /**
+     * @var Promotion
+     * @ORM\ManyToOne(targetEntity="OnlineFashionBundle\Entity\Promotion", inversedBy="article")
+     *
+     */
+    private $promotion;
+
+    /**
+     * @var Category
+     */
+    private $category;
 
     /**
      * @var string
@@ -92,10 +120,35 @@ class Article
     private $viewCount;
 
     /**
+     * @var string
+     * @ORM\Column(name="description", type="text")
+     * @Expose()
+     */
+private $description;
+
+    /**
      * @var ArrayCollection|Comment[]
      * @ORM\OneToMany(targetEntity="OnlineFashionBundle\Entity\Comment", mappedBy="article", cascade={"remove"})
      */
     private $comments;
+
+
+//    /**
+//     * @var PurchaseItem[]
+//     * @ORM\OneToMany(targetEntity="PurchaseItem", mappedBy="article", cascade={"remove"})
+//     */
+//    private $purchasedItems;
+
+    /**
+     * Article constructor.
+     */
+    public function __construct()
+    {
+        $this->dateAdded = new DateTime('now');
+        $this->comments= new ArrayCollection();
+        $this->categories= new ArrayCollection();
+        $this->promotions= new ArrayCollection();
+    }
 
     /**
      * @return ArrayCollection|Comment[]
@@ -115,12 +168,7 @@ class Article
         return $this;
     }
 
-    public function __construct()
-    {
-        $this->dateAdded = new DateTime('now');
-        $this->comments= new ArrayCollection();
-        $this->categories= new ArrayCollection();
-    }
+
 
     /**
      * Get id
@@ -133,7 +181,7 @@ class Article
     }
 
     /**
-     * Set title
+     *
      *
      * @param string $name
      *
@@ -181,22 +229,22 @@ class Article
         return $this->dateAdded;
     }
 
-
-    public function setDescription()
+    public function setSummary()
     {
-        $this->description = substr($this->description, 0, strlen($this->description) / 2) . "...";
+        $this->summary = substr($this->description, 0, strlen($this->description) / 2) . "...";
     }
 
     /**
      * @return string
      */
-    public function getDescription()
+    public function getSummary()
     {
-        if (null === $this->description) {
-            $this->setDescription();
+        if (null === $this->summary) {
+            $this->setSummary();
         }
-        return $this->description;
+        return $this->summary;
     }
+
 
 
     /**
@@ -283,8 +331,32 @@ class Article
         $this->basePrice = $basePrice;
     }
 
+
     /**
-     * @return ArrayCollection|Category[]
+     * @param Category $category
+     */
+    public function addCategory($category)
+    {
+        if ($this->categories->contains($category)) {
+            return;
+        }
+        $this->categories->add($category);
+        $category->addArticle($this);
+    }
+    /**
+     * @param Category $category
+     */
+    public function removeCategory($category)
+    {
+        if (!$this->categories->contains($category)) {
+            return;
+        }
+        $this->categories->removeElement($category);
+        $category->removeArticle($this);
+    }
+
+    /**
+     *  @return Category[]
      */
     public function getCategories()
     {
@@ -292,11 +364,100 @@ class Article
     }
 
     /**
+     * @param Category[] $categories
+     */
+    public function setCategories($categories)
+    {
+        foreach ($categories as $category) {
+            $this->removeCategory($category);
+        }
+        foreach ($categories as $category) {
+            $this->addCategory($category);
+        }
+    }
+
+    /**
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * @param string $description
+     * @return Article
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+        return $this;
+    }
+
+    /**
      * @param Category $category
      */
-    public function setCategories($category)
+    public function setCategory($category)
     {
         $this->categories[] = $category;
+    }
+
+    /**
+     * @return Category
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
+    /**
+     * @return Promotion[]
+     */
+    public function getPromotions()
+    {
+        return $this->promotions;
+    }
+
+    /**
+     * @param Promotion $promotion
+     */
+    public function setPromotions($promotion)
+    {
+        $this->promotions[] = $promotion;
+    }
+
+    /**
+     * @return Promotion
+     */
+    public function getPromotion()
+    {
+        return $this->promotion;
+    }
+
+    /**
+     * @param Promotion $promotion
+     */
+    public function setPromotion($promotion)
+    {
+        $this->promotion = $promotion;
+    }
+
+    /**
+     * @return float
+     */
+    public function getPromoPrice()
+    {
+        return $this->promoPrice;
+    }
+
+    /**
+     * @param float $promoPrice
+     * @return Article
+     */
+    public function setPromoPrice($promoPrice)
+    {
+        $this->promoPrice = $promoPrice;
+        return $this;
     }
 
 

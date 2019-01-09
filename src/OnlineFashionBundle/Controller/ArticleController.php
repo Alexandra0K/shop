@@ -24,14 +24,15 @@ class ArticleController extends Controller
      */
     public function createAction(Request $request)
     {
-        $article = new Article();
-        $form = $this->createForm(ArticleType::class, $article);
-        $form->handleRequest($request);
-
         $categories = $this
             ->getDoctrine()
             ->getRepository(Category::class)
             ->findAll();
+
+        $article = new Article();
+        $form = $this->createForm(ArticleType::class, $article);
+        $form->handleRequest($request);
+
 
         if ($form->isSubmitted() && $form->isValid()) {
 
@@ -40,18 +41,15 @@ class ArticleController extends Controller
 
             $fileName = md5(uniqid()) . '.' . $file->guessExtension();
 
-            try{
+            try {
                 $file->move($this->getParameter('articles_directory'), $fileName);
-            }catch (FileException $exception){
+            } catch (FileException $exception) {
 
             }
 
-
-
             $article->setImage($fileName);
-
-
             $currentUser = $this->getUser();
+
             $article->setAuthor($currentUser);
             $article->setViewCount(0);
 
@@ -63,7 +61,7 @@ class ArticleController extends Controller
         }
 
         return $this->render('article/create.html.twig',
-            ['form' => $form->createView(), 'categories'=> $categories]);
+            ['form' => $form->createView(), 'categories' => $categories]);
     }
 
     /**
@@ -83,6 +81,10 @@ class ArticleController extends Controller
             ->getRepository(Comment::class)
             ->findAllComments($article);
 
+        $categories = $this->getDoctrine()
+            ->getRepository(Category::class)
+            ->find($article->getId());
+
         $article->setViewCount($article->getViewCount() + 1);
         $em = $this->getDoctrine()->getManager();
 
@@ -90,7 +92,7 @@ class ArticleController extends Controller
         $em->flush();
 
         return $this->render("article/article.html.twig",
-            ['article' => $article, 'comments' => $comments]);
+            ['article' => $article, 'comments' => $comments, 'categories' => $categories]);
     }
 
     /**
@@ -107,14 +109,14 @@ class ArticleController extends Controller
             ->getRepository(Article::class)
             ->find($id);
 
-        if($article === null){
+        if ($article === null) {
             return $this->redirectToRoute("blog_index");
         }
 
         /** @var User $currentUser */
         $currentUser = $this->getUser();
 
-        if(!$currentUser->isAuthor($article) && !$currentUser->isAdmin()){
+        if (!$currentUser->isAuthor($article) && !$currentUser->isAdmin()) {
             return $this->redirectToRoute("blog_index");
         }
 
@@ -132,9 +134,9 @@ class ArticleController extends Controller
 
             $fileName = md5(uniqid()) . '.' . $file->guessExtension();
 
-            try{
+            try {
                 $file->move($this->getParameter('articles_directory'), $fileName);
-            }catch (FileException $exception){
+            } catch (FileException $exception) {
 
             }
 
@@ -150,7 +152,7 @@ class ArticleController extends Controller
         }
 
         return $this->render('article/edit.html.twig',
-            ['form' => $form->createView(), 'article' =>$article]);
+            ['form' => $form->createView(), 'article' => $article]);
     }
 
     /**
@@ -167,14 +169,14 @@ class ArticleController extends Controller
             ->getRepository(Article::class)
             ->find($id);
 
-        if($article === null){
+        if ($article === null) {
             return $this->redirectToRoute("blog_index");
         }
 
         /** @var User $currentUser */
         $currentUser = $this->getUser();
 
-        if(!$currentUser->isAuthor($article) && !$currentUser->isAdmin()){
+        if (!$currentUser->isAuthor($article) && !$currentUser->isAdmin()) {
             return $this->redirectToRoute("blog_index");
         }
 
@@ -192,17 +194,18 @@ class ArticleController extends Controller
         }
 
         return $this->render('article/delete.html.twig',
-            ['form' => $form->createView(), 'article' =>$article]);
+            ['form' => $form->createView(), 'article' => $article]);
     }
 
     /**
      * @Route("/myArticles", name="myArticles")
      * @Security("is_granted('IS_AUTHENTICATED_FULLY')")
      */
-    public function myArticles(){
+    public function myArticles()
+    {
         $currentUser = $this->getUser()->getId();
 
-     $articles = $this
+        $articles = $this
             ->getDoctrine()
             ->getRepository(Article::class)
             ->findBy(['authorId' => $currentUser]);
@@ -215,7 +218,8 @@ class ArticleController extends Controller
      * @Security("is_granted('IS_AUTHENTICATED_FULLY')")
      *
      */
-    public function likes(){
+    public function likes()
+    {
 
         return $this->redirectToRoute("blog_index");
     }

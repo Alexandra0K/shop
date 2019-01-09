@@ -14,11 +14,11 @@
             <div class="col-md-12">
                 <article>
                     <header>
-                        <h2>{{ article.title }}</h2>
+                        <h2>{{ article.name }}</h2>
                     </header>
 
                     <p>
-                        {{ article.content }}
+                        {{ article.description }}
                     </p>
 
 
@@ -31,7 +31,8 @@
 
                     <a href="{{ path('article_likes', {'id': article.id}) }}"><i class="glyphicon glyphicon-thumbs-up"></i></a>
 
-                    <button class="btn btn-success btn-sm" id="btnComment">Add</button>
+
+                    <button class="btn btn-success btn-sm" id="btnComment">Add comment</button>
 
                     <div id="form">
                     </div>
@@ -49,7 +50,10 @@
                                 <a class="btn btn-danger btn-xs" href="{{ path('article_delete', {'id':article.id}) }}">delete &raquo;</a>
                                 <a class="btn btn-success btn-xs" href="{{ path('article_edit', {'id':article.id}) }}">edit &raquo;</a>
                             {% endif %}
-                            <a class="btn btn-default btn-xs" href="{{ path('blog_index') }}">back &raquo;</a>
+
+                            <a class="btn btn-success btn-xs" href="{{ path('orderr_addToBasket', {'id':article.id}) }}">Add to basket</a>
+                            <a class="btn btn-default btn-xs" href="{{ path('blog_index') }}">Back &raquo;</a>
+
                         </div>
                     </footer>
                 </article>
@@ -74,7 +78,7 @@
         `);
 
         $('#btnComment').click(function (e) {
-            // alert('hi');
+
             e.preventDefault();
             $('#form').append(form);
             $('#form').toggle();

@@ -1,8 +1,6 @@
 <?php
 
 namespace OnlineFashionBundle\Repository;
-use Doctrine\ORM\EntityManager;
-use Doctrine\ORM\Mapping;
 use OnlineFashionBundle\Entity\Article;
 
 /**
