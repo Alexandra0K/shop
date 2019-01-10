@@ -1,0 +1,124 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+
+
+
+<div class="container body-description span=8 offset=2">
+    <div class="well">
+        <form method="post" class="form-horizontal" enctype="multipart/form-data" action="{{ path('promo_create') }}" >
+            <fieldset>
+                <legend>New Promo</legend>
+
+                <script>
+                    $(document).ready(function() {
+                        $('.js-datepicker').datepicker({
+                            format: 'yyyy-mm-dd'
+                        });
+                    });
+                </script>
+
+                <div class="form-group">
+                    <label class="col-sm-4 control-label" for="promo_validFrom">Valid from</label>
+                    <div class="col-sm-6">
+                        <input type="date"
+                                class="form-control"
+                                  id="promo_validFrom"
+                                  placeholder="Valid from"
+                                  name="promotion[validFrom]">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-4 control-label" for="promo_validTo">Valid to</label>
+                    <div class="col-sm-6">
+                        <input type="date"
+                               class="form-control"
+                               id="promo_validTo"
+                               placeholder="Valid to"
+                               name="promotion[validTo]">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="col-sm-4 control-label" for="promo_reduction">Reduction</label>
+                    <div class="col-sm-6">
+                        <input type="number"
+                               class="form-control"
+                               id="promo_reduction"
+                               placeholder="Reduction"
+                               name="promotion[reduction]">
+                    </div>
+                </div>
+
+                <div class="form-group" >
+                    <label class="col-sm-4 control-label" for="article_category" >Category</label>
+                    <div class="col-sm-4 " >
+
+                        <select name="column_select" id="column_select">
+                            <option value="null">Please select</option>
+                            <option value="w">Women</option>
+                            <option value="m">Men</option>
+                        </select>
+
+                        <select name="layout_select" id="layout_select">
+                            <!--Below shows when 'Women' is selected is hidden otherwise-->
+                            <option value="null2">Please select</option>
+                            <option value="w_shirt">Shirts</option>
+                            <option value="w_trousers">Trousers</option>
+                            <option value="w_shoe">Shoes</option>
+                            <option value="w_accessories">Accessories</option>
+                            <option value="w_coat">Coats</option>
+                            <option value="w_dress">Dresses</option>
+                            <option value="w_skirt">Skirts</option>
+
+                            <!--Below shows when 'Men' is selected is hidden otherwise-->
+                            <option value="m_shirt">Shirts</option>
+                            <option value="m_trousers">Trousers</option>
+                            <option value="m_shoe">Shoes</option>
+                            <option value="m_accessories">Accessories</option>
+                            <option value="m_coat">Coats</option>
+
+
+                        </select>
+
+                        <script>
+                            $(document).ready(function() {
+                                $("#layout_select").children('option:gt(0)').hide();
+                                $("#column_select").change(function() {
+                                    $("#layout_select").children('option').hide();
+                                    $("#layout_select").children("option[value^=" + $(this).val() + "]").show()
+                                })
+                            })
+                        </script>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="col-sm-4 control-label" for="promo_weight">Promo weight</label>
+                    <div class="col-sm-6">
+                        <input type="number"
+                               class="form-control"
+                               id="promo_weight"
+                               placeholder="Promo weight"
+                               name="promotion[weight]">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-4 col-sm-offset-4">
+                        <a class="btn btn-default" href="{{ path('blog_index') }}">Cancel</a>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+
+                {{  form_row(form._token) }}
+
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+    <div class="container body-description span=8 offset=2">
+        <div class="well">
+            <form method="post" class="form-horizontal" enctype="multipart/form-data" action="{{ path('orderr_create') }}" >
+                <fieldset>
+                <legend>New Order</legend>
+
+                <div class="form-group">
+                    <label class="col-sm-4 control-label" for="orderr_description">Description</label>
+                    <div class="col-sm-6">
+                        <textarea class="form-control" rows="6"
+                                  id="orderr_description"
+                                  placeholder="Description"
+                                  name="orderr[description]"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-4 control-label" for="orderr_deliveryAddress">Delivery address</label>
+                    <div class="col-sm-6">
+                        <textarea class="form-control" rows="6"
+                                  id="orderr_deliveryAddress"
+                                  placeholder="Delivery address"
+                                  name="orderr[deliveryAddress]"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-4 col-sm-offset-4">
+                        <a class="btn btn-default" href="{{ path('blog_index') }}">Cancel</a>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+
+                    {{  form_row(form._token) }}
+
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
