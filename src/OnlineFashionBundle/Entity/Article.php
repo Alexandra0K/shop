@@ -7,6 +7,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use JMS\Serializer\Annotation\ExclusionPolicy;
 use JMS\Serializer\Annotation\Expose;
+use Symfony\Component\Validator\Constraints\Collection;
 
 /**
  * Article
@@ -94,6 +95,13 @@ class Article
     private $promotions;
 
     /**
+     * @var ArrayCollection| OrderArticle[]
+     * @ORM\OneToMany(targetEntity="OnlineFashionBundle\Entity\OrderArticle", mappedBy="article")
+     * @Expose()
+     */
+    private $orderArticles;
+
+    /**
      * @var Promotion
      * @ORM\ManyToOne(targetEntity="OnlineFashionBundle\Entity\Promotion", inversedBy="article")
      *
@@ -148,6 +156,7 @@ private $description;
         $this->comments= new ArrayCollection();
         $this->categories= new ArrayCollection();
         $this->promotions= new ArrayCollection();
+        $this->orderArticles = new ArrayCollection();
     }
 
     /**
@@ -460,6 +469,30 @@ private $description;
         return $this;
     }
 
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
 
+    /**
+     * @return ArrayCollection|OrderArticle[]
+     */
+    public function getOrderArticles()
+    {
+        return $this->orderArticles;
+    }
+
+    /**
+     * @param OrderArticle $orderArticle
+     * @return Article
+     */
+    public function addOA(OrderArticle $orderArticle)
+    {
+        $this->orderArticles[] = $orderArticle;
+        return $this;
+    }
 }
 

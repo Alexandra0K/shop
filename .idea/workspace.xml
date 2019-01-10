@@ -2,111 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39d29037-7b3d-4edd-b120-294a04e3ad40" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/shop/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/.idea/blog.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/.idea/dataSources/48008d94-a930-4b10-8af1-6275e86cd6a0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/.idea/dataSources/48008d94-a930-4b10-8af1-6275e86cd6a0/storage_v2/_src_/schema/blog.oi8uAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/.idea/jsLibraryMappings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/.idea/php.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/.idea/symfony2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/app/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/app/AppCache.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/app/AppKernel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/app/Resources/views/admin/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/app/Resources/views/admin/user_profile.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/app/Resources/views/article/article.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/app/Resources/views/article/create.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/app/Resources/views/article/delete.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/app/Resources/views/article/edit.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/app/Resources/views/article/myArticles.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/app/Resources/views/base.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/app/Resources/views/home/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/app/Resources/views/security/login.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/app/Resources/views/user/mailbox.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/app/Resources/views/user/message.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/app/Resources/views/user/profile.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/app/Resources/views/user/register.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/app/Resources/views/user/send_message.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/app/config/config.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/app/config/config_dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/app/config/config_prod.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/app/config/config_test.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/app/config/parameters.yml.dist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/app/config/routing.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/app/config/routing_dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/app/config/security.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/app/config/services.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/bin/.idea/bin.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/bin/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/bin/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/bin/.idea/php.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/bin/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/bin/console" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/bin/symfony_requirements" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/composer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/composer.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/phpunit.xml.dist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/OnlineFashionBundle/Controller/AdminController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/OnlineFashionBundle/Controller/ArticleController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/OnlineFashionBundle/Controller/CommentController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/OnlineFashionBundle/Controller/HomeController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/OnlineFashionBundle/Controller/MessageController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/OnlineFashionBundle/Controller/SecurityController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/OnlineFashionBundle/Controller/UserController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/OnlineFashionBundle/Entity/Article.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/OnlineFashionBundle/Entity/Category.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/OnlineFashionBundle/Entity/CategoryParent.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/OnlineFashionBundle/Entity/Comment.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/OnlineFashionBundle/Entity/Message.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/OnlineFashionBundle/Entity/Role.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/OnlineFashionBundle/Entity/User.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/OnlineFashionBundle/Form/ArticleType.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/OnlineFashionBundle/Form/CategoryParentType.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/OnlineFashionBundle/Form/CategoryType.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/OnlineFashionBundle/Form/CommentType.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/OnlineFashionBundle/Form/MessageType.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/OnlineFashionBundle/Form/UserType.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/OnlineFashionBundle/OnlineFashionBundle.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/OnlineFashionBundle/Repository/ArticleRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/OnlineFashionBundle/Repository/CategoryParentRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/OnlineFashionBundle/Repository/CategoryRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/OnlineFashionBundle/Repository/CommentRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/OnlineFashionBundle/Repository/MessageRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/OnlineFashionBundle/Repository/RoleRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/OnlineFashionBundle/Repository/UserRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/OnlineFashionRestApiBundle/Controller/ArticleController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/OnlineFashionRestApiBundle/OnlineFashionRestApiBundle.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/OnlineFashionRestApiBundle/Resources/config/services.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/src/OnlineFashionRestApiBundle/Resources/views/Default/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/tests/AppBundle/Controller/DefaultControllerTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/tests/SoftUniBlogRestApiBundle/Controller/DefaultControllerTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/var/SymfonyRequirements.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/var/logs/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/var/sessions/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/web/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/web/app.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/web/app_dev.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/web/apple-touch-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/web/config.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/web/css/bootstrap-datetimepicker.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/web/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/web/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/web/js/bootstrap-datetimepicker.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/web/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/web/js/jquery-3.3.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/web/js/moment.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/web/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/web/uploads/images/0c1da20f790ffb97402f56283aa38e92.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/web/uploads/images/a2eef8f6d3333e4f551c40befd592f8a.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/web/uploads/images/afd5e1c540959b0b2b34d047ac31aa95.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/src/OnlineFashionBundle/Controller/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/shop/src/OnlineFashionBundle/Controller/ArticleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/src/OnlineFashionBundle/Entity/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/shop/src/OnlineFashionBundle/Entity/Article.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -259,10 +156,10 @@
           <entry key="jpeg" value="1" />
           <entry key="json" value="2" />
           <entry key="lock" value="2" />
-          <entry key="php" value="163" />
+          <entry key="php" value="176" />
           <entry key="rst" value="1" />
           <entry key="symfony_requirements" value="3" />
-          <entry key="twig" value="46" />
+          <entry key="twig" value="51" />
           <entry key="xml" value="3" />
           <entry key="yml" value="46" />
         </counts>
@@ -273,10 +170,10 @@
           <entry key="IDEA_MODULE" value="3" />
           <entry key="Image" value="1" />
           <entry key="JSON" value="4" />
-          <entry key="PHP" value="171" />
+          <entry key="PHP" value="184" />
           <entry key="PLAIN_TEXT" value="6" />
           <entry key="ReST" value="1" />
-          <entry key="Twig" value="46" />
+          <entry key="Twig" value="51" />
           <entry key="XML" value="5" />
           <entry key="YAML" value="46" />
           <entry key="htaccess" value="7" />
@@ -287,17 +184,17 @@
           <entry key="css" value="1" />
           <entry key="dist" value="4" />
           <entry key="dummy" value="30" />
-          <entry key="php" value="3834" />
-          <entry key="twig" value="2542" />
+          <entry key="php" value="4419" />
+          <entry key="twig" value="2715" />
           <entry key="yml" value="43" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="1" />
-          <entry key="PHP" value="3834" />
+          <entry key="PHP" value="4419" />
           <entry key="PLAIN_TEXT" value="34" />
-          <entry key="Twig" value="2542" />
+          <entry key="Twig" value="2715" />
           <entry key="YAML" value="43" />
         </counts>
       </usages-collector>
@@ -316,53 +213,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/orderr/create.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="17" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/OnlineFashionBundle/Controller/OrderrController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-261">
-              <caret line="56" column="53" selection-start-line="56" selection-start-column="53" selection-end-line="56" selection-end-column="53" />
+            <state relative-caret-position="63">
+              <caret line="86" column="88" selection-start-line="86" selection-start-column="88" selection-end-line="86" selection-end-column="88" />
               <folding>
                 <element signature="e#50#89#0#PHP" expanded="true" />
+                <element signature="e#6435#6465#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/orderr/addToBasket.html.twig">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/article/myArticles.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="122" column="33" selection-start-line="122" selection-start-column="33" selection-end-line="122" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OnlineFashionBundle/Controller/ArticleController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="224" column="5" selection-start-line="215" selection-start-column="2" selection-end-line="224" selection-end-column="5" />
+            <state relative-caret-position="286">
+              <caret line="25" column="83" selection-start-line="25" selection-start-column="83" selection-end-line="25" selection-end-column="83" />
               <folding>
-                <element signature="e#50#90#0#PHP" expanded="true" />
-                <element signature="e#6518#6548#0#PHP" expanded="true" />
+                <element signature="e#12#26#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/OnlineFashionBundle/Entity/Orderr.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2873">
+              <caret line="169" column="45" selection-start-line="169" selection-start-column="45" selection-end-line="169" selection-end-column="45" />
+              <folding>
+                <element signature="e#46#94#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -371,30 +253,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/article/article.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="32" selection-start-line="31" selection-start-column="18" selection-end-line="32" />
-              <folding>
-                <element signature="e#12#26#0#Twig" expanded="true" />
-                <element signature="e#915#928#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OnlineFashionBundle/Controller/HomeController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/home/index.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="200">
+              <caret line="49" column="97" selection-start-line="49" selection-start-column="97" selection-end-line="49" selection-end-column="115" />
               <folding>
                 <element signature="e#12#26#0#Twig" expanded="true" />
               </folding>
@@ -403,10 +263,52 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shop/shop-master/src/OnlineFashionBundle/Entity/Article.php">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/article/edit.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="61" column="12" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="12" />
+            <state relative-caret-position="450">
+              <caret line="48" selection-start-line="48" selection-end-line="48" />
+              <folding>
+                <element signature="e#12#26#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/OnlineFashionBundle/Entity/OrderArticle.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1772">
+              <caret line="128" column="7" selection-start-line="128" selection-start-column="7" selection-end-line="128" selection-end-column="7" />
+              <folding>
+                <element signature="e#46#78#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/OnlineFashionBundle/Entity/Article.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1615">
+              <caret line="100" column="7" selection-start-line="100" selection-start-column="7" selection-end-line="100" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shop/src/OnlineFashionBundle/Controller/ArticleController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="97" column="4" selection-start-line="97" selection-start-column="4" selection-end-line="213" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/OnlineFashionBundle/Entity/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="237" selection-start-line="237" selection-end-line="237" />
             </state>
           </provider>
         </entry>
@@ -415,12 +317,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>add</find>
-      <find>descri</find>
-      <find>description</find>
-      <find>clea</find>
-      <find>desc</find>
-      <find>chil</find>
       <find>getCa</find>
       <find>summa</find>
       <find>removeCa</find>
@@ -445,6 +341,12 @@
       <find>pro</find>
       <find>myA</find>
       <find>likes</find>
+      <find>OA</find>
+      <find>isAu</find>
+      <find>orderA</find>
+      <find>order</find>
+      <find>OrderA</find>
+      <find>orderrI</find>
     </findStrings>
     <replaceStrings>
       <replace>SoftUniBlogBundle</replace>
@@ -463,8 +365,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/OnlineFashionBundle/Controller/UserController.php" />
-        <option value="$PROJECT_DIR$/src/OnlineFashionBundle/Entity/Comment.php" />
         <option value="$PROJECT_DIR$/src/OnlineFashionBundle/Entity/Message.php" />
         <option value="$PROJECT_DIR$/src/OnlineFashionBundle/Form/CommentType.php" />
         <option value="$PROJECT_DIR$/src/OnlineFashionBundle/Form/MessageType.php" />
@@ -485,7 +385,6 @@
         <option value="$PROJECT_DIR$/src/OnlineFashionBundle/Entity/Role.php" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/src/OnlineFashionBundle/Controller/HomeController.php" />
-        <option value="$PROJECT_DIR$/app/Resources/views/article/myArticles.html.twig" />
         <option value="$PROJECT_DIR$/src/OnlineFashionBundle/Repository/CommentRepository.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/article/edit.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/article/delete.html.twig" />
@@ -497,22 +396,25 @@
         <option value="$PROJECT_DIR$/app/Resources/views/article/create.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/order/create.html.twig" />
         <option value="$PROJECT_DIR$/src/OnlineFashionBundle/Controller/OrderController.php" />
-        <option value="$PROJECT_DIR$/src/OnlineFashionBundle/Entity/Orderr.php" />
-        <option value="$PROJECT_DIR$/src/OnlineFashionBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/orderr/create.html.twig" />
         <option value="$PROJECT_DIR$/src/OnlineFashionBundle/Form/OrderArticleType.php" />
-        <option value="$PROJECT_DIR$/src/OnlineFashionBundle/Entity/OrderArticle.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/promo/create.html.twig" />
         <option value="$PROJECT_DIR$/src/OnlineFashionBundle/Entity/Category.php" />
-        <option value="$PROJECT_DIR$/src/OnlineFashionBundle/Entity/Promotion.php" />
         <option value="$PROJECT_DIR$/src/OnlineFashionBundle/Form/PromotionType.php" />
         <option value="$PROJECT_DIR$/src/OnlineFashionBundle/Controller/PromotionController.php" />
-        <option value="$PROJECT_DIR$/src/OnlineFashionBundle/Entity/Article.php" />
-        <option value="$PROJECT_DIR$/app/Resources/views/orderr/addToBasket.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/home/index.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/article/article.html.twig" />
         <option value="$PROJECT_DIR$/src/OnlineFashionBundle/Controller/ArticleController.php" />
+        <option value="$PROJECT_DIR$/src/OnlineFashionBundle/Entity/Promotion.php" />
+        <option value="$PROJECT_DIR$/shop/src/OnlineFashionBundle/Entity/Article.php" />
+        <option value="$PROJECT_DIR$/src/OnlineFashionBundle/Entity/User.php" />
+        <option value="$PROJECT_DIR$/shop/src/OnlineFashionBundle/Controller/ArticleController.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/article/article.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/orderr/addToBasket.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/article/myArticles.html.twig" />
+        <option value="$PROJECT_DIR$/src/OnlineFashionBundle/Entity/Orderr.php" />
+        <option value="$PROJECT_DIR$/src/OnlineFashionBundle/Entity/Article.php" />
+        <option value="$PROJECT_DIR$/src/OnlineFashionBundle/Entity/OrderArticle.php" />
         <option value="$PROJECT_DIR$/src/OnlineFashionBundle/Controller/OrderrController.php" />
       </list>
     </option>
@@ -935,12 +837,12 @@
       <workItem from="1546351191870" duration="17713000" />
       <workItem from="1546534494067" duration="64291000" />
       <workItem from="1547023441664" duration="18313000" />
-      <workItem from="1547045816987" duration="7959000" />
+      <workItem from="1547045816987" duration="21447000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="261056000" />
+    <option name="totallyTimeSpent" value="274544000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -953,6 +855,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="723" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49839228" visible="true" weight="0.21331316" />
       <window_info id="Structure" order="1" sideWeight="0.5016077" side_tool="true" weight="0.16868381" />
@@ -976,29 +879,6 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" weight="0.18003026" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49839228" visible="true" weight="0.21331316" />
-      <window_info id="Structure" order="1" sideWeight="0.5016077" side_tool="true" weight="0.16868381" />
-      <window_info id="Favorites" order="2" sideWeight="0.5008489" side_tool="true" weight="0.16868381" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32767403" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3293718" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3293718" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" weight="0.3293718" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4969743" visible="true" weight="0.33106962" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5030257" side_tool="true" weight="0.2580645" />
-      <window_info anchor="bottom" id="Database Console" order="12" weight="0.3293718" />
-      <window_info anchor="bottom" id="PHP-CGI Server" order="13" weight="0.3293718" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" weight="0.18003026" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -1007,31 +887,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/AppCache.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/.htaccess">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/console">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/symfony_requirements">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-31" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/.idea/php.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="10" lean-forward="true" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/.idea/bin.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1087,13 +942,6 @@
         <state relative-caret-position="-476" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OnlineFashionBundle/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="57" column="88" selection-start-line="57" selection-start-column="88" selection-end-line="57" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/user/register.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="388">
@@ -1118,24 +966,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/article/edit.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/OnlineFashionBundle/Controller/MessageController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
           <caret line="46" column="52" selection-start-line="46" selection-start-column="52" selection-end-line="46" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OnlineFashionBundle/Form/OrderArticleType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -1221,11 +1055,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OnlineFashionBundle/Controller/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-337" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/OnlineFashionBundle/Controller/PromotionController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="284">
@@ -1237,38 +1066,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/orderr/addToBasket.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/orderr/create.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="17" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OnlineFashionBundle/Entity/OrderArticle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1233">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OnlineFashionBundle/Entity/Article.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-880">
-          <caret line="46" column="23" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="122" column="33" selection-start-line="122" selection-start-column="33" selection-end-line="122" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -1296,44 +1097,138 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="122" column="33" selection-start-line="122" selection-start-column="33" selection-end-line="122" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/OnlineFashionBundle/Entity/Promotion.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3478">
-          <caret line="268" column="29" selection-start-line="268" selection-start-column="29" selection-end-line="268" selection-end-column="29" />
+        <state relative-caret-position="85">
+          <caret line="62" column="63" selection-start-line="62" selection-start-column="63" selection-end-line="62" selection-end-column="63" />
           <folding>
             <element signature="e#46#59#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/article/article.html.twig">
+    <entry file="file://$PROJECT_DIR$/shop/src/OnlineFashionBundle/Entity/Article.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="32" selection-start-line="31" selection-start-column="18" selection-end-line="32" />
+        <state relative-caret-position="17">
+          <caret line="267" selection-start-line="267" selection-end-line="284" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/src/OnlineFashionBundle/Controller/ArticleController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="97" column="4" selection-start-line="97" selection-start-column="4" selection-end-line="213" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/article/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
           <folding>
             <element signature="e#12#26#0#Twig" expanded="true" />
-            <element signature="e#915#928#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OnlineFashionBundle/Controller/ArticleController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="224" column="5" selection-start-line="215" selection-start-column="2" selection-end-line="224" selection-end-column="5" />
+        <state relative-caret-position="327">
+          <caret line="97" column="5" selection-start-line="97" selection-start-column="5" selection-end-line="197" selection-end-column="7" />
           <folding>
             <element signature="e#50#90#0#PHP" expanded="true" />
-            <element signature="e#6518#6548#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/article/article.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="49" column="97" selection-start-line="49" selection-start-column="97" selection-end-line="49" selection-end-column="115" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/orderr/addToBasket.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="32" column="136" selection-start-line="32" selection-start-column="136" selection-end-line="32" selection-end-column="136" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OnlineFashionBundle/Controller/UserController.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OnlineFashionBundle/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="237" selection-start-line="237" selection-end-line="237" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OnlineFashionBundle/Form/OrderrType.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OnlineFashionBundle/Form/OrderArticleType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/article/myArticles.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="25" column="83" selection-start-line="25" selection-start-column="83" selection-end-line="25" selection-end-column="83" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OnlineFashionBundle/Entity/Article.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1615">
+          <caret line="100" column="7" selection-start-line="100" selection-start-column="7" selection-end-line="100" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OnlineFashionBundle/Entity/OrderArticle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1772">
+          <caret line="128" column="7" selection-start-line="128" selection-start-column="7" selection-end-line="128" selection-end-column="7" />
+          <folding>
+            <element signature="e#46#78#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OnlineFashionBundle/Entity/Orderr.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2873">
+          <caret line="169" column="45" selection-start-line="169" selection-start-column="45" selection-end-line="169" selection-end-column="45" />
+          <folding>
+            <element signature="e#46#94#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OnlineFashionBundle/Controller/OrderrController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-261">
-          <caret line="56" column="53" selection-start-line="56" selection-start-column="53" selection-end-line="56" selection-end-column="53" />
+        <state relative-caret-position="63">
+          <caret line="86" column="88" selection-start-line="86" selection-start-column="88" selection-end-line="86" selection-end-column="88" />
           <folding>
             <element signature="e#50#89#0#PHP" expanded="true" />
+            <element signature="e#6435#6465#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

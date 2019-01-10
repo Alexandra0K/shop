@@ -25,6 +25,7 @@ class User implements UserInterface
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
+     *
      * @Expose()
      */
     private $id;
@@ -51,6 +52,13 @@ class User implements UserInterface
      *@Expose()
      */
     private $articles;
+
+    /**
+     * @var ArrayCollection
+     * @ORM\OneToMany(targetEntity="OnlineFashionBundle\Entity\OrderArticle", mappedBy="author")
+     *@Expose()
+     */
+    private $orderArticles;
 
     /**
      * @var ArrayCollection
@@ -112,6 +120,7 @@ class User implements UserInterface
     public function __construct()
     {
         $this->articles = new ArrayCollection();
+        $this->orderArticles = new ArrayCollection();
         $this->roles = new ArrayCollection();
         $this->comments = new ArrayCollection();
         $this->recipients = new ArrayCollection();
@@ -314,6 +323,24 @@ class User implements UserInterface
     }
 
     /**
+     * @return Collection
+     */
+    public function getOrderArticles()
+    {
+        return $this->orderArticles;
+    }
+
+    /**
+     * @param OrderArticle $orderArticle
+     * @return User
+     */
+    public function addOA(OrderArticle $orderArticle)
+    {
+        $this->orderArticles[] = $orderArticle;
+        return $this;
+    }
+
+    /**
      * @param $role
      * @return User
      */
@@ -330,6 +357,15 @@ class User implements UserInterface
     public function isAuthor(Article $article)
     {
         return $article->getAuthorId() === $this->getId();
+    }
+
+    /**
+     * @param OrderArticle $orderArticle
+     * @return bool
+     */
+    public function isAuthorOA(OrderArticle $orderArticle)
+    {
+        return $orderArticle->getAuthorId() === $this->getId();
     }
 
     /**

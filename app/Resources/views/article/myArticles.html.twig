@@ -3,7 +3,7 @@
 {% block main %}
 <div class="container body-content">
     <div class="row">
-        {% for article in articles %}
+        {% for article in orderArticles %}
         <div class="col-md-12">
             <article>
                 <header>
@@ -19,6 +19,8 @@
                                 <a class="btn btn-danger btn-xs" href="{{ path('article_delete', {'id':article.id}) }}">delete
                                     &raquo;</a>
                                 <a class="btn btn-success btn-xs" href="{{ path('article_edit', {'id':article.id}) }}">edit
+                                    &raquo;</a>
+                                <a class="btn btn-success btn-xs" href="{{ path('orderr_create')}}">Complete your order
                                     &raquo;</a>
                                 <a class="btn btn-default btn-xs"
                                    href="{{ path('blog_index') }}">Back &raquo;</a>
